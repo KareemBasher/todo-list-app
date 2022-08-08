@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
-#paper {
+.paper {
     width: 100%;
     height: 90%;
     position: relative;
@@ -12,7 +12,7 @@
     font-family: 'Raleway', sans-serif;
 }
 
-#paper::before {
+.paper::before {
     width: 2px;
     content: '';
     position: absolute;
@@ -22,9 +22,17 @@
     background-color: #7c000a;
 }
 
-#pattern {
+.pattern {
     height: 100%;
     background-image: repeating-linear-gradient(#201F1E 3px, #201F1E 24px, #133B56 25px);
+}
+
+.patternLight {
+    background-image: repeating-linear-gradient(#FBFBF8 3px, #FBFBF8 24px, yellow 25px);
+}
+
+.paperLight::before {
+    background-color: red;
 }
 
 #content {
@@ -43,14 +51,14 @@
     line-height: 25px;
 }
 
-#text {
+.text {
     display: inline-block;
     position: relative;
     margin-left: 0.5em;
     transition: color 300ms ease-in;
 }
 
-#text:before {
+.text:before {
     content: '';
     display: block;
     position: absolute;
@@ -62,12 +70,20 @@
     transition: width 300ms ease-in;
 }
 
-#content input:checked ~ #text {
+.textLight:before {
+    background-color: #60626c;
+}
+
+#content input:checked ~ .text {
     color: rgba(221, 221, 221, 0.25);
 }
 
-#content input:checked ~ #text:before {
+#content input:checked ~ .text:before {
     width: 100%;
+}
+
+#content input:checked~ .textLight {
+    color: #60626caa;
 }
 
 #emoticon {

@@ -1,13 +1,18 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/App.js", "./src/NoteBook.jsx", "./src/Entries.jsx"],
+  content: [
+    "./src/App.js",
+    "./src/NoteBook.jsx",
+    "./src/Entries.jsx",
+    "./src/SidePanel.jsx",
+    "./src/MainPage.jsx",
+    "./src/NotFound.jsx"],
   theme: {
     extend: {
       colors: {
         'midnight': '#201F1E',
-        'lineRed': '#D71324',
-        'lineBlue': '#133B56',
-        'altLineRed': '#7c000a',
+        'paperGrey': '#FBFBF8',
+        'lightGrey': '#F5F5F5',
       },
     },
   },
