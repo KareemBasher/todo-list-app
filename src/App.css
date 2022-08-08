@@ -6,7 +6,6 @@
     position: relative;
     margin: 20px auto;
     background-color: #201F1E;
-    border: 1px solid rgba(221, 221, 221, 0.25);
     padding: 40px 0;
     overflow: hidden;
 
@@ -25,7 +24,7 @@
 
 #pattern {
     height: 100%;
-    background-image: repeating-linear-gradient(#201F1E 0px, #201F1E 24px, #133B56 25px);
+    background-image: repeating-linear-gradient(#201F1E 3px, #201F1E 24px, #133B56 25px);
 }
 
 #content {
@@ -69,4 +68,25 @@
 
 #content input:checked ~ #text:before {
     width: 100%;
+}
+
+#emoticon {
+    display: inline-block;
+    overflow: hidden;
+    border-right: 2px solid white;
+    white-space: nowrap;
+    padding: 0.25em;
+    animation: 
+        typing 3.5s steps(40, end),
+        blink-caret 750ms  infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: white }
 }
