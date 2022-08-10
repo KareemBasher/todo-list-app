@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import joi from 'joi';
 import { useNavigate } from "react-router-dom";
+import './App.css';
 
 export const Signup = () => {
     const navigate = useNavigate();
@@ -17,13 +18,13 @@ export const Signup = () => {
     const schema = joi.object({
         firstName: joi.string()
             .alphanum()
-            .min(5)
+            .min(3)
             .required()
             .label('1'),
 
         lastName: joi.string()
             .alphanum()
-            .min(5)
+            .min(3)
             .required()
             .label('2'),
 
@@ -85,81 +86,70 @@ export const Signup = () => {
 
   return (
     <div className={`bg-zinc-900 text-white h-screen flex justify-center items-center`}>
-        <div className='p-16 border border-zinc-600'>
-            <div className='px-2 pb-8 text-3xl text-center after:bg-zinc-600 after:h-px after:block'>
+        <div className='w-1/4 px-20 pt-10 pb-3 border border-zinc-600'>
+            <div className='px-2 pb-8 text-3xl text-center'>
                 Sign Up
             </div>
 
             <div>
                 <form onSubmit={handleOnSubmit} className=''>
-                    <div className='p-2'>
-                        <label
-                            htmlFor="firstName"
-                            className='block text-center font-thin text-lg'
-                        >
+                    <div className={`p-2 mb-8 after:bg-zinc-600 after:h-px after:block ${formData.errors.firstName && 'after:bg-red-700'}`}>
+                        <div className='text-xs'>
                             First Name
-                        </label>
+                        </div>
                         <input
                             type="text"
                             name='firstName'
                             value={formData.firstName}
                             onChange={changeInput}
-                            className={`rounded-lg bg-lightGrey text-black px-2 outline-none shadow-md ${formData.errors.firstName && 'shadow-red-700'} focus:shadow-slate-400`}
+                            className={`bg-transparent outline-none placeholder:text-center text-lg h-10 w-full`}
                         />
                     </div>
 
-                    <div className='p-2'>
-                        <label
-                            htmlFor="lastName"
-                            className='block text-center font-thin text-lg'
-                        >
+                    <div className={`p-2 mb-8 after:bg-zinc-600 after:h-px after:block ${formData.errors.lastName && 'after:bg-red-700'}`}>
+                        <div className='text-xs'>
                             Last Name
-                        </label>
+                        </div>
                         <input
                             type="text"
                             name='lastName'
                             value={formData.lastName}
                             onChange={changeInput}
-                            className={`rounded-lg bg-lightGrey text-black px-2 outline-none shadow-md ${formData.errors.lastName && 'shadow-red-700'} focus:shadow-slate-400`}
+                            className={`bg-transparent outline-none placeholder:text-center text-lg h-10 w-full`}
                         />
                     </div>
 
-                    <div className='p-2'>
-                        <label
-                            htmlFor="password"
-                            className='block text-center font-thin text-lg'
-                        >
+                    <div className={`p-2 mb-8 after:bg-zinc-600 after:h-px after:block ${formData.errors.password && 'after:bg-red-700'}`}>
+                        <div className='text-xs'>
                             Password
-                        </label>
+                        </div>
                         <input
                             type="password"
                             name='password'
                             value={formData.password}
                             onChange={changeInput}
-                            className={`rounded-lg bg-lightGrey text-black px-2 outline-none shadow-md ${formData.errors.password && 'shadow-red-700'} focus:shadow-slate-400`}
+                            className={`bg-transparent outline-none placeholder:text-center text-lg h-10 w-full`}
                         />
                     </div>
 
-                    <div className='p-2'>
-                        <label
-                            htmlFor="repeatPassword"
-                            className='block text-center font-thin text-lg'
-                        >
+                    <div className={`p-2 mb-8 after:bg-zinc-600 after:h-px after:block ${formData.errors.password && 'after:bg-red-700'}`}>
+                        <div className='text-xs'>
                             Confirm Password
-                        </label>
+                        </div>
                         <input
                             type="password"
                             name='repeatPassword'
                             value={formData.repeatPassword}
                             onChange={changeInput}
-                            className={`rounded-lg bg-lightGrey text-black px-2 outline-none shadow-md ${formData.errors.password && 'shadow-red-700'} focus:shadow-slate-400`}
+                            className={`bg-transparent outline-none placeholder:text-center text-lg h-10 w-full`}
+                            
                         />
                     </div>
 
                     <div className='flex justify-center m-8'>
                         <button
                             type='submit'
-                            className='px-8 py-3 hover:text-black hover:bg-zinc-300 transition-all duration-300 border border-zinc-600 rounded-xl'
+                            className='w-full py-3 hover:text-black hover:bg-zinc-300 transition-all duration-300 border border-zinc-600 rounded-md'
                         >
                             Sign up
                         </button>

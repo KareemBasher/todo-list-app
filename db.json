@@ -15,12 +15,12 @@
         {
           "id": 3,
           "content": "Gotta Wake Early to finish my JavaScript Course",
-          "checked": false
+          "checked": true
         },
         {
           "id": 4,
           "content": "Finish Season #3 of Breaking Bad",
-          "checked": false
+          "checked": true
         },
         {
           "id": 5,
@@ -34,6 +34,14 @@
       "firstName": "Youssef",
       "lastName": "Mohamed",
       "password": "asdasdasdasd",
+      "darkMode": true,
+      "data": []
+    },
+    {
+      "id": "9d6c984a-57d3-42dd-9e5f-f4a783483d7a",
+      "firstName": "Moaz",
+      "lastName": "Ahmed",
+      "password": "159753xo",
       "darkMode": true,
       "data": []
     }
