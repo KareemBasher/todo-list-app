@@ -16,7 +16,7 @@ export const MainPage = () => {
     const darkModeStyles = 'bg-zinc-900 text-white';
 
   return (
-    <div className={`${darkMode?darkModeStyles : 'bg-lightGrey'} h-screen flex transition-all duration-300`}>
+    <div className={`${darkMode? darkModeStyles : 'bg-lightGrey'} h-screen flex transition-all duration-300`}>
         <div className='w-1/5'>
           <SidePanel userName={userName.split('-')} toggleDarkMode={toggleDarkMode} darkMode={darkMode}/>
         </div>

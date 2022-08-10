@@ -8,7 +8,6 @@
     background-color: #201F1E;
     padding: 40px 0;
     overflow: hidden;
-
     font-family: 'Raleway', sans-serif;
 }
 
@@ -74,15 +73,15 @@
     background-color: #60626c;
 }
 
-#content input:checked ~ .text {
+#content input:checked ~ #entry__container .text {
     color: rgba(221, 221, 221, 0.25);
 }
 
-#content input:checked ~ .text:before {
+#content input:checked ~ #entry__container .text:before {
     width: 100%;
 }
 
-#content input:checked~ .textLight {
+#content input:checked ~ #entry__container .textLight {
     color: #60626caa;
 }
 
