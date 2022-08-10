@@ -1,0 +1,62 @@
+{
+    "users": [
+            {   "id": 1,
+                "firstName": "Karim",
+                "lastName": "Bashir",
+                "darkMode": true,
+                "data": [
+                    {
+                        "id": 1,
+                        "content": "has7a bokra el sa3a 8:00",
+                        "checked": false
+                    }
+                ]
+            },
+
+            {
+                "id": 2,
+                "firstName": "Mohamed",
+                "lastName": "Ibrahim",
+                "darkMode": false,
+                "data": [
+                    {
+                        "id": 1,
+                        "content": "has7a bokra el sa3a 8:30 3shan el snay3ya byego el sa3a 8:30",
+                        "checked": true
+                    },
+
+                    {
+                        "id": 2,
+                       "content": "a3ml shay llsnay3eya",
+                        "checked": false 
+                    }
+                ]
+            },
+
+            {
+                "id": 3,
+                "firstName": "Prob",
+                "lastName": "Moaz",
+                "darkMode": true,
+                "data": [
+                    {
+                        "id": 1,
+                        "content": "Gotta Wake Early to finish my JavaScript Course",
+                        "checked": true
+                    },
+
+                    {
+                        "id": 2,
+                        "content": "Finish Season #3 of Breaking Bad",
+                        "checked": false 
+                    },
+
+                    {
+                        "id": 3,
+                        "content": "Rank Up in ApexLegends",
+                        "checked": false 
+                    }
+                ]
+            }
+    ]
+}
