@@ -1,21 +1,16 @@
 import './App.css';
-import { NoteBook } from './NoteBook';
-import { SidePanel } from './SidePanel';
-import { Routes } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
+import { MainPage } from './MainPage';
+import { NotFound } from './NotFound';
 
 function App() {
   return (
     <>
-
       <Routes>
-        
+        <Route path="/login" element={<NotFound />} />
+        <Route path="*" element={<NotFound />} />
+        <Route path="/user/:user" element={<MainPage />}/>
       </Routes>
-      <div className="dark:bg-zinc-900 dark:text-white h-screen flex">
-        <div className='w-1/3'>
-          <SidePanel/>
-        </div>
-        <NoteBook />
-      </div>
     </>
   );
 }
