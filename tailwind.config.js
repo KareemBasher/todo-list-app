@@ -6,7 +6,8 @@ module.exports = {
     "./src/Entries.jsx",
     "./src/SidePanel.jsx",
     "./src/MainPage.jsx",
-    "./src/NotFound.jsx"],
+    "./src/NotFound.jsx",
+    "./src/Signup.jsx"],
   theme: {
     extend: {
       colors: {

@@ -10,7 +10,7 @@ export const NoteBook = props => {
         <div className={`paper border border-zinc-600 ${!darkMode && 'paperLight bg-paperGrey'} drop-shadow-2xl`}>
           <div className={`p-5 px-16 text-4xl ${!darkMode && 'bg-paperGrey'}`}>#TO DO</div>
             <div className={`pattern ${!darkMode && 'patternLight'}`}>
-                <Entries darkMode={darkMode}/>
+                <Entries darkMode={darkMode} />
             </div>
         </div>
     </div>

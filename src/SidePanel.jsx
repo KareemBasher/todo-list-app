@@ -2,16 +2,38 @@ import React from 'react';
 import { FiSun } from 'react-icons/fi';
 import { FaMoon } from 'react-icons/fa';
 import { Link } from "react-router-dom";
+import { useEffect, useState } from 'react';
+import { useParams } from "react-router-dom";
 
 export const SidePanel = props => {
-    const { userName, toggleDarkMode, darkMode } = props;
+    const { toggleDarkMode, darkMode } = props;
+    const [ userData, setUserData ] = useState(
+        {
+            "firstName": "",
+            "lastName": "",
+        }
+    );
+    const params = useParams();
+    const userId = params.user;
+    const url = `http://localhost:3001/users/${userId}`;
+
+    useEffect(() => {
+        fetch(url)
+        .then(result => {
+            return result.json();
+        })
+
+        .then(data => {
+            setUserData(data);
+        })
+    }, [url])
 
   return (
     <div className='p-12'>
         <div>
             <div className='flex justify-between items-center'>
                 <div className={`h-28 w-28 border border-zinc-600 rounded-full flex justify-center items-center text-4xl ${darkMode? 'bg-zinc-800' : 'bg-zinc-300'} m-4`}>
-                    {`${userName[0][0]}${userName[1][0]}`}
+                    {`${userData.firstName[0]}${userData.lastName[0]}`}
                 </div>
 
                 <div>
@@ -24,7 +46,7 @@ export const SidePanel = props => {
                 </div>
             </div>
             
-            <div className='text-3xl'>{userName.join(' ')}</div>
+            <div className='text-3xl'>{userData.firstName} {userData.lastName}</div>
         </div>
 
         <Link className='text-zinc-600 hover:text-zinc-400 transition-all duration-300' to={`/login`}>Sign out</Link>

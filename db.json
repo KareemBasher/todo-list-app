@@ -1,47 +1,12 @@
 {
   "users": [
     {
-      "id": 1,
-      "firstName": "Karim",
-      "lastName": "Bashir",
-      "darkMode": true,
-      "data": [
-        {
-          "id": 1,
-          "content": "has7a bokra el sa3a 8:00",
-          "checked": false
-        }
-      ]
-    },
-    {
-      "id": 2,
+      "id": "6a664fea-6fbe-4c35-8441-b30bf3dd7724",
       "firstName": "Mohamed",
-      "lastName": "Ibrahim",
-      "darkMode": false,
-      "data": [
-        {
-          "id": 1,
-          "content": "has7a bokra el sa3a 8:30 3shan el snay3ya byego el sa3a 8:30",
-          "checked": true
-        },
-        {
-          "id": 2,
-          "content": "a3ml shay llsnay3eya",
-          "checked": false
-        }
-      ]
-    },
-    {
-      "id": 3,
-      "firstName": "Prob",
-      "lastName": "Moaz",
+      "lastName": "Ashraf",
+      "password": "asdasdasd",
       "darkMode": true,
       "data": [
-        {
-          "id": 1,
-          "content": "Gotta Wake Early to finish my JavaScript Course",
-          "checked": true
-        },
         {
           "id": 2,
           "content": "Finish Season #3 of Breaking Bad",
@@ -49,10 +14,28 @@
         },
         {
           "id": 3,
+          "content": "Gotta Wake Early to finish my JavaScript Course",
+          "checked": false
+        },
+        {
+          "id": 4,
+          "content": "Finish Season #3 of Breaking Bad",
+          "checked": false
+        },
+        {
+          "id": 5,
           "content": "Rank Up in ApexLegends",
           "checked": false
         }
       ]
+    },
+    {
+      "id": "c7bfb6be-c80e-422f-bb90-9a72a5bc4341",
+      "firstName": "Youssef",
+      "lastName": "Mohamed",
+      "password": "asdasdasdasd",
+      "darkMode": true,
+      "data": []
     }
   ]
 }
