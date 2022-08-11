@@ -102,7 +102,7 @@ export const Signup = () => {
                             name='firstName'
                             value={formData.firstName}
                             onChange={changeInput}
-                            className={`bg-transparent outline-none placeholder:text-center text-lg h-10 w-full`}
+                            className={`bg-transparent outline-none placeholder:text-center text-lg h-10 w-full focus:bg-zinc-800`}
                         />
                     </div>
 
@@ -115,7 +115,7 @@ export const Signup = () => {
                             name='lastName'
                             value={formData.lastName}
                             onChange={changeInput}
-                            className={`bg-transparent outline-none placeholder:text-center text-lg h-10 w-full`}
+                            className={`bg-transparent outline-none placeholder:text-center text-lg h-10 w-full focus:bg-zinc-800`}
                         />
                     </div>
 
@@ -128,7 +128,7 @@ export const Signup = () => {
                             name='password'
                             value={formData.password}
                             onChange={changeInput}
-                            className={`bg-transparent outline-none placeholder:text-center text-lg h-10 w-full`}
+                            className={`bg-transparent outline-none placeholder:text-center text-lg h-10 w-full focus:bg-zinc-800`}
                         />
                     </div>
 
@@ -141,7 +141,7 @@ export const Signup = () => {
                             name='repeatPassword'
                             value={formData.repeatPassword}
                             onChange={changeInput}
-                            className={`bg-transparent outline-none placeholder:text-center text-lg h-10 w-full`}
+                            className={`bg-transparent outline-none placeholder:text-center text-lg h-10 w-full focus:bg-zinc-800`}
                             
                         />
                     </div>
