@@ -3,18 +3,11 @@ import { useState } from 'react';
 import './App.css';
 import { useParams } from "react-router-dom";
 import { useEffect } from 'react';
+import ClipLoader from "react-spinners/ClimbingBoxLoader";
 
 export const Entries = props => {
     const { darkMode } = props;
-    const [ listData, setListData ] = useState(
-            [
-                {
-                    "id": 1,
-                    "content": "has7a bokra el sa3a 8:00",
-                    "checked": false
-                }
-            ]
-    );
+    const [ listData, setListData ] = useState(null);
     const params = useParams();
     const userId = params.user;
     const url = `http://localhost:3001/users/${userId}`;
@@ -28,7 +21,7 @@ export const Entries = props => {
         .then(data => {
             setListData(data.data);
         })
-    }, [])
+    }, [url])
 
     const editChecked = async (e) => {
         const targetId = +e.target.dataset.id;
@@ -66,21 +59,33 @@ export const Entries = props => {
 
   return (
     <div>
-        {listData.map(({ id, content, checked }) => (
-            <label id="content" key={id}>
-                <input type="checkbox" data-id={id} defaultChecked={checked} onClick={editChecked}/>
-                <div id='entry__container' className='w-11/12 inline-flex justify-between'>
-                    <div className={`text ${!darkMode && 'textLight'}`}>
-                        {content}
-                    </div>
-                </div>
-                
-                <div className='inline-block w-'>
-                    <button className='text-zinc-500'>Edit</button>
-                    <button className='text-red-700' data-id={id} onClick={handleDelete}>X</button>
-                </div>
-            </label>
-        ))}
+        {
+            listData ?
+
+            <div>
+                {listData.map(({ id, content, checked }) => (
+                    <label id="content" key={id}>
+                        <input type="checkbox" data-id={id} defaultChecked={checked} onClick={editChecked}/>
+                        <div id='entry__container' className='w-11/12 inline-flex justify-between'>
+                            <div className={`text ${!darkMode && 'textLight'}`}>
+                                {content}
+                            </div>
+                        </div>
+                        
+                        <div className='inline-block w-'>
+                            <button className='text-zinc-500'>Edit</button>
+                            <button className='text-red-700 hover:text-red-600' data-id={id} onClick={handleDelete}>X</button>
+                        </div>
+                    </label>
+                ))}
+            </div>
+            
+            :
+
+            <div className='h-[65vh] w-full flex justify-center items-center'>
+                <ClipLoader color={`${darkMode ? "#F5F5F5" : "#201F1E"}`} loading={!listData} size={20} />
+            </div>
+        }
     </div>
   )
 }
