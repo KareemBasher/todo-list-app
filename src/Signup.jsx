@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import joi from 'joi';
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import './App.css';
 
 export const Signup = () => {
@@ -10,6 +10,7 @@ export const Signup = () => {
     const [formData, setFormData] = useState({
         firstName: "",
         lastName: "",
+        userName: "",
         password: "",
         repeatPassword: "",
         errors: {}
@@ -27,6 +28,11 @@ export const Signup = () => {
             .min(3)
             .required()
             .label('2'),
+
+        userName: joi.string()
+            .min(3)
+            .required()
+            .label('4'),
 
         password: joi.string()
             .alphanum()
@@ -58,6 +64,7 @@ export const Signup = () => {
                 "firstName": formData.firstName,
                 "lastName": formData.lastName,
                 "password": formData.password,
+                "userName": formData.userName.toLowerCase(),
                 "darkMode": true,
                 "data": []
             }
@@ -79,6 +86,7 @@ export const Signup = () => {
             if (err === '1') errors.firstName = 'First name is required';
             else if (err === '2') errors.lastName = 'Last name is required';   
             else if (err === '3') errors.password = 'Password is required';
+            else if (err === '4') errors.userName = 'User name is required';
         }
         
         setFormData(prev => ({ ...prev, errors }));
@@ -92,7 +100,7 @@ export const Signup = () => {
             </div>
 
             <div>
-                <form onSubmit={handleOnSubmit} className=''>
+                <form onSubmit={handleOnSubmit} onKeyPress={e => e.key === 'Enter' && handleOnSubmit()} method='post'>
                     <div className={`p-2 mb-8 after:bg-zinc-600 after:h-px after:block ${formData.errors.firstName && 'after:bg-red-700'}`}>
                         <div className='text-xs'>
                             First Name
@@ -119,12 +127,26 @@ export const Signup = () => {
                         />
                     </div>
 
+                    <div className={`p-2 mb-8 after:bg-zinc-600 after:h-px after:block ${formData.errors.userName && 'after:bg-red-700'}`}>
+                        <div className='text-xs'>
+                            UserName
+                        </div>
+                        <input
+                            type="text"
+                            name='userName'
+                            value={formData.userName}
+                            onChange={changeInput}
+                            className={`bg-transparent outline-none placeholder:text-center text-lg h-10 w-full focus:bg-zinc-800`}
+                        />
+                    </div>
+
                     <div className={`p-2 mb-8 after:bg-zinc-600 after:h-px after:block ${formData.errors.password && 'after:bg-red-700'}`}>
                         <div className='text-xs'>
                             Password
                         </div>
                         <input
                             type="password"
+                            autoComplete="new-password"
                             name='password'
                             value={formData.password}
                             onChange={changeInput}
@@ -153,6 +175,13 @@ export const Signup = () => {
                         >
                             Sign up
                         </button>
+                    </div>
+
+                    <div className='text-zinc-600'>
+                        Already have an account?&nbsp;
+                        <Link className='text-zinc-500 hover:text-zinc-400 transition-all duration-300' to={`/login`}>
+                            Log in
+                        </Link>
                     </div>
                 </form>
             </div>

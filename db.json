@@ -1,60 +1,28 @@
 {
   "users": [
     {
-      "id": "6a664fea-6fbe-4c35-8441-b30bf3dd7724",
-      "firstName": "Mohamed",
-      "lastName": "Ashraf",
+      "id": "dbac66a0-049d-4b19-bc88-bcd92f953121",
+      "firstName": "Karim",
+      "lastName": "Bashir",
       "password": "asdasdasd",
-      "darkMode": true,
-      "data": []
-    },
-    {
-      "id": "c7bfb6be-c80e-422f-bb90-9a72a5bc4341",
-      "firstName": "Youssef",
-      "lastName": "Mohamed",
-      "password": "asdasdasdasd",
-      "darkMode": true,
-      "data": []
-    },
-    {
-      "id": "9d6c984a-57d3-42dd-9e5f-f4a783483d7a",
-      "firstName": "Moaz",
-      "lastName": "Ahmed",
-      "password": "159753xo",
-      "darkMode": true,
-      "data": []
-    },
-    {
-      "id": "534d8ecb-87cd-4fb2-bb7a-4bf1992487db",
-      "firstName": "Abdalla",
-      "lastName": "Tarek",
-      "password": "bodipiea",
-      "darkMode": true,
-      "data": []
-    },
-    {
-      "id": "6d7d345c-2f38-49f8-b141-3ebe85d3521b",
-      "firstName": "Ibrahim",
-      "lastName": "Mohamed",
-      "password": "asdasdasd",
+      "userName": "karim.bashir",
       "darkMode": true,
       "data": [
         {
-          "id": "5f1202f0-16c3-4570-a0ea-be5158ab2027",
-          "content": "awl wa7da",
-          "checked": false
-        },
-        {
-          "id": "201d5d3c-6b3b-4017-8d89-5660fb194515",
-          "content": "asdasd",
-          "checked": false
-        },
-        {
-          "id": "4413af8e-3f2e-441f-9006-2ea4ed536c4b",
-          "content": "qweqweqwe",
+          "id": "049bee02-b47c-4b84-b98b-628b98c4b707",
+          "content": "This is the first item",
           "checked": true
         }
       ]
+    },
+    {
+      "id": "a97ba492-9928-403d-b743-850576d178ae",
+      "firstName": "Moaz",
+      "lastName": "Ahmed",
+      "password": "159753xo",
+      "userName": "probmoaz",
+      "darkMode": true,
+      "data": []
     }
   ]
 }
