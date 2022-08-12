@@ -27,7 +27,7 @@
 }
 
 .patternLight {
-    background-image: repeating-linear-gradient(#FBFBF8 3px, #FBFBF8 24px, #929292 25px);
+    background-image: repeating-linear-gradient(#FBFBF8 -10px, #FBFBF8 24px, #929292 25px);
 }
 
 .paperLight::before {

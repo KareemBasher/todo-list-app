@@ -12,6 +12,11 @@
           "id": "049bee02-b47c-4b84-b98b-628b98c4b707",
           "content": "This is the first item",
           "checked": false
+        },
+        {
+          "id": "19217d8c-aa17-4305-85de-ef96640d7314",
+          "content": "This is a new item",
+          "checked": false
         }
       ]
     },
@@ -21,12 +26,12 @@
       "lastName": "Ahmed",
       "password": "159753xo",
       "userName": "probmoaz",
-      "darkMode": true,
+      "darkMode": false,
       "data": [
         {
           "id": "6416a6c9-35c2-4569-8fbf-edf397e0a937",
           "content": "asdasd",
-          "checked": false
+          "checked": true
         },
         {
           "id": "b1b81db0-cf98-4fb1-b36b-ae8f0c9cba16",
