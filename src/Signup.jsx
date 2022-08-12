@@ -129,7 +129,7 @@ export const Signup = () => {
 
                     <div className={`p-2 mb-8 after:bg-zinc-600 after:h-px after:block ${formData.errors.userName && 'after:bg-red-700'}`}>
                         <div className='text-xs'>
-                            UserName
+                            User Name
                         </div>
                         <input
                             type="text"

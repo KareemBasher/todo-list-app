@@ -5,8 +5,10 @@ import { Link } from "react-router-dom";
 import { useEffect, useState } from 'react';
 import { useParams } from "react-router-dom";
 import ClipLoader from "react-spinners/PuffLoader";
+import Cookies from 'universal-cookie';
 
 export const SidePanel = props => {
+    const cookies = new Cookies();
     const { toggleDarkMode, darkMode } = props;
     const [ userData, setUserData ] = useState(null);
     const params = useParams();
@@ -48,7 +50,13 @@ export const SidePanel = props => {
                     <div className='text-3xl'>{userData.firstName} {userData.lastName}</div>
                 </div>
 
-                <Link className='text-zinc-600 hover:text-zinc-400 transition-all duration-300' to={`/login`}>Sign out</Link>
+                <Link
+                    className='text-zinc-600 hover:text-zinc-400 transition-all duration-300'
+                    to={`/login`}
+                    onClick={() => cookies.remove('id')}
+                >
+                    Sign out
+                </Link>
             </>
 
             :

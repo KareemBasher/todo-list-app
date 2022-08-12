@@ -1,8 +1,10 @@
 import React from 'react';
 import { useState } from 'react';
 import { useNavigate, Link } from "react-router-dom";
+import Cookies from 'universal-cookie';
 
 export const Login = () => {
+    const cookies = new Cookies();
     const navigate = useNavigate();
     const [ formData, setFormData ] = useState({
         userName: '',
@@ -28,7 +30,8 @@ export const Login = () => {
         .then(data => {
             if (data[0]) {
                 if (data[0].userName === formData.userName && data[0].password === formData.password) {
-                    navigate(`/user/${data[0].id}`)
+                    cookies.set('id', data[0].id, {path: '/', expires: new Date(Date.now()+2592000)});
+                    navigate(`/user/${data[0].id}`);
                 } else {
                     setFormData(prev => ({
                         ...prev,

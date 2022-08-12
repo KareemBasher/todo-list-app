@@ -11,7 +11,7 @@
         {
           "id": "049bee02-b47c-4b84-b98b-628b98c4b707",
           "content": "This is the first item",
-          "checked": true
+          "checked": false
         }
       ]
     },
@@ -21,6 +21,26 @@
       "lastName": "Ahmed",
       "password": "159753xo",
       "userName": "probmoaz",
+      "darkMode": true,
+      "data": [
+        {
+          "id": "6416a6c9-35c2-4569-8fbf-edf397e0a937",
+          "content": "asdasd",
+          "checked": false
+        },
+        {
+          "id": "b1b81db0-cf98-4fb1-b36b-ae8f0c9cba16",
+          "content": "Start a campaign with Karim",
+          "checked": false
+        }
+      ]
+    },
+    {
+      "id": "4f4ce16a-c85d-4231-8b03-28b94118b2d6",
+      "firstName": "Youssef",
+      "lastName": "Mohamed",
+      "password": "asdasdasd",
+      "userName": "jojo",
       "darkMode": true,
       "data": []
     }
