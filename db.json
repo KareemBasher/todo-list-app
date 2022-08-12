@@ -6,28 +6,7 @@
       "lastName": "Ashraf",
       "password": "asdasdasd",
       "darkMode": true,
-      "data": [
-        {
-          "id": 2,
-          "content": "Finish Season #3 of Breaking Bad",
-          "checked": false
-        },
-        {
-          "id": 3,
-          "content": "Gotta Wake Early to finish my JavaScript Course",
-          "checked": false
-        },
-        {
-          "id": 4,
-          "content": "Finish Season #3 of Breaking Bad",
-          "checked": false
-        },
-        {
-          "id": 5,
-          "content": "Rank Up in ApexLegends",
-          "checked": false
-        }
-      ]
+      "data": []
     },
     {
       "id": "c7bfb6be-c80e-422f-bb90-9a72a5bc4341",
@@ -59,7 +38,23 @@
       "lastName": "Mohamed",
       "password": "asdasdasd",
       "darkMode": true,
-      "data": []
+      "data": [
+        {
+          "id": "5f1202f0-16c3-4570-a0ea-be5158ab2027",
+          "content": "awl wa7da",
+          "checked": false
+        },
+        {
+          "id": "201d5d3c-6b3b-4017-8d89-5660fb194515",
+          "content": "asdasd",
+          "checked": false
+        },
+        {
+          "id": "4413af8e-3f2e-441f-9006-2ea4ed536c4b",
+          "content": "qweqweqwe",
+          "checked": true
+        }
+      ]
     }
   ]
 }
