@@ -205,7 +205,7 @@ export const Entries = props => {
                     />
                 </div>}
 
-                <div className='w-[93%] flex justify-end text-white'>
+                <div className={`w-[93%] flex justify-end ${darkMode ? 'text-white' : 'text-zinc-500'}`}>
                     {!editState && 
                         <button onClick={handleAddButton}>
                             {addDisabled ? 'cancel' :  <FiPlus />}
