@@ -7,7 +7,8 @@ module.exports = {
     "./src/SidePanel.jsx",
     "./src/MainPage.jsx",
     "./src/NotFound.jsx",
-    "./src/Signup.jsx"],
+    "./src/Signup.jsx",
+    "./src/Login.jsx"],
   theme: {
     extend: {
       colors: {
