@@ -23,7 +23,7 @@
 
 .pattern {
     height: 100%;
-    background-image: repeating-linear-gradient(#201F1E 3px, #201F1E 24px, #133B56 25px);
+    background-image: repeating-linear-gradient(#201F1E -10px, #201F1E 24px, #133B56 25px);
 }
 
 .patternLight {
@@ -37,17 +37,17 @@
 #content {
     display: block;
     position: relative;
-    margin-bottom: 12px;
+    /* margin-bottom: 12px; */
     cursor: pointer;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
 
-    padding-top: 6px;
+    /* padding-top: 0px; */
     padding-left: 56px;
     padding-right: 16px;
-    line-height: 25px;
+    line-height: 35px;
 }
 
 .text {
