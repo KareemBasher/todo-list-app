@@ -3,9 +3,11 @@ import { v4 as uuidv4 } from 'uuid';
 import joi from 'joi';
 import { useNavigate, Link } from "react-router-dom";
 import './App.css';
+import Cookies from 'universal-cookie';
 
 export const Signup = () => {
     const navigate = useNavigate();
+    const cookies = new Cookies();
 
     const [formData, setFormData] = useState({
         firstName: "",
@@ -68,6 +70,8 @@ export const Signup = () => {
                 "darkMode": true,
                 "data": []
             }
+
+            cookies.set('id', user.id, {path: '/', expires: new Date(Date.now()+2592000)});
 
             fetch("http://localhost:3001/users", {
                 method: 'POST',
