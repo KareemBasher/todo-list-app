@@ -57,7 +57,7 @@ export const Login = () => {
     <div className={`bg-zinc-900 text-white h-screen flex justify-center items-center`}>
         <div className='w-1/4 px-20 pt-10 pb-3 border border-zinc-600'>
             <div className='px-2 pb-8 text-3xl text-center'>
-                Log in
+                Log In
             </div>
 
             <div>
