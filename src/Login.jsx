@@ -29,7 +29,7 @@ export const Login = () => {
 
         .then(data => {
             if (data[0]) {
-                if (data[0].userName === formData.userName && data[0].password === formData.password) {
+                if (data[0].userName === formData.userName.toLowerCase() && data[0].password === formData.password) {
                     cookies.set('id', data[0].id, {path: '/', expires: new Date(Date.now()+2592000)});
                     navigate(`/user/${data[0].id}`);
                 } else {
