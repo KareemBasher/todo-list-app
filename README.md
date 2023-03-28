@@ -31,4 +31,4 @@ json-server --watch  db.json --port 3001 --delay 1500
 
 This will give the data a 1.5 second delay.
 
-Now, got to `localhost:3000/login` and you will be treated with the login page, or `/signup` for the signup page.
+Now, go to `localhost:3000/login` and you will be treated with the login page, or `/signup` for the signup page.
