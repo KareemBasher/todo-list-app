@@ -11,7 +11,7 @@
         {
           "id": "049bee02-b47c-4b84-b98b-628b98c4b707",
           "content": "This is the first item",
-          "checked": false
+          "checked": true
         },
         {
           "id": "19217d8c-aa17-4305-85de-ef96640d7314",
@@ -26,8 +26,19 @@
       "lastName": "Ahmed",
       "password": "159753xo",
       "userName": "probmoaz",
-      "darkMode": false,
-      "data": []
+      "darkMode": true,
+      "data": [
+        {
+          "id": "6d7a41f7-666c-4074-aa3a-506c611aa8f2",
+          "content": "Akool ma7shyyy asdasd asdasdasdasdAkool ma7shyyy asdasd asdasdasdasdAkool ma7shyyy asdasd asdasdasdasdAkool ma7shyyy asdasd asdasdasdasdAkool ma7shyyy asdasd asdasdasdasd",
+          "checked": false
+        },
+        {
+          "id": "7aa9943d-e44f-4197-aaa4-f841b24a59ae",
+          "content": "asasd",
+          "checked": false
+        }
+      ]
     },
     {
       "id": "4f4ce16a-c85d-4231-8b03-28b94118b2d6",
@@ -108,6 +119,21 @@
         {
           "id": "86f93d6a-4427-4df0-9d28-dbe073c8783e",
           "content": "Wake up early in the morning.",
+          "checked": false
+        }
+      ]
+    },
+    {
+      "id": "43c7d1bb-205a-4a26-9e0d-f03989b78a2c",
+      "firstName": "Mohamed",
+      "lastName": "Ashraf",
+      "password": "12345678910",
+      "userName": "mohamed.ashraf",
+      "darkMode": true,
+      "data": [
+        {
+          "id": "cb751735-3ee6-4c24-a26a-f7f49841d40f",
+          "content": "Mohamed 3ayz yshrab coffee.",
           "checked": false
         }
       ]
